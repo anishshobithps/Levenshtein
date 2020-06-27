@@ -1,3 +1,4 @@
+ 
 name: Build
 
 on:
@@ -8,12 +9,12 @@ on:
 
 jobs:
   build:
-    name: Node v${{ matrix.node_version }} - ${{ matrix.os }}
-    runs-on: ${{ matrix.os }}
+
+    runs-on: ubuntu-latest
+
     strategy:
       matrix:
-        node_version: [12.x, 14.x]
-        os: [ubuntu-latest, windows-latest, macOS-latest]
+        node-version: [12.x, 14.x]
 
     steps:
     - uses: actions/checkout@v2
@@ -21,9 +22,5 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Install node-gyp
     - run: yarn global add node-gyp
-    - name: Install node modules
-    - run: yarn
-    - name: Build
-    - run: yarn build
+    - run: yarn && yarn build
