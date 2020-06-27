@@ -24,7 +24,7 @@ jobs:
       run: yarn global add node-gyp
 
     - name: Install modules
-      run: yarn && ls
+      run: cd Levenshtein && yarn
 
     - name: Build
-      run: yarn build
+      run: cd Levenshtein && yarn build
