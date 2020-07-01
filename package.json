@@ -1,6 +1,6 @@
 {
   "name": "anish-levenshteindistance",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A npm package to calculate the distance between two strings using Levenshtein Distance forumla.",
   "main": "index.js",
   "repository": "git@github.com:Anish-Shobith/Levenshtein.git",
