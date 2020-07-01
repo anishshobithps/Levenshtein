@@ -1,6 +1,4 @@
 #include <napi.h>
-#include <string.h>
-#include <assert.h>
 #include "./levenshtein.cpp"
 
 Napi::Value Levenshtein(const Napi::CallbackInfo& info)
